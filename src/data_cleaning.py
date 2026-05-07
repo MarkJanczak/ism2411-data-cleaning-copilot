@@ -39,7 +39,8 @@ def remove_invalid_rows(df):
 def trim_whitespace(df):
         string_columns = df.select_dtypes(include=['object']).columns
         for col in string_columns:
-                df.loc[:, col] = df[col].str.rstrip().lstrip() # added lstrip() to remove leading whitespace as well.
+                df.loc[:, col] = df[col].str.rstrip()
+                df.loc[:, col] = df[col].str.lstrip()  # Added: Remove leading whitespace as well
         return df
 
 if __name__ == "__main__":
@@ -48,6 +49,7 @@ if __name__ == "__main__":
 
         df_raw = load_data(raw_path)
         df_clean = clean_column_names(df_raw)
+        df_clean = trim_whitespace(df_clean)  # Added: Trim whitespace from string columns for consistency
         df_clean = handle_missing_values(df_clean)
         df_clean = remove_invalid_rows(df_clean)
         df_clean.to_csv(cleaned_path, index=False)
