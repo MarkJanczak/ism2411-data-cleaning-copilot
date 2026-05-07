@@ -9,6 +9,7 @@ python src/data_cleaning.py
 ```
 
 # Example Interaction
+```
 Cleaning complete. First few rows:
            prodname         category  price qty    date\_sold
 0         USB Cable    "Electronics"   7.99   3   2024-01-02
@@ -16,3 +17,4 @@ Cleaning complete. First few rows:
 5  wireless  mouse    " electronics"  15.99   1   2024-01-04
 6        Coffee Mug        "Kitchen"   5.49  10   2024-01-05
 8          Notebook         "Office"   3.25  25   2024-01-06
+```
