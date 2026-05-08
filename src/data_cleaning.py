@@ -43,6 +43,7 @@ def trim_whitespace(df):
                 df.loc[:, col] = df[col].str.lstrip()  # Added: Remove leading whitespace as well
         return df
 
+# given code from the instructions. Added trim_whitespice as a bonus.
 if __name__ == "__main__":
         raw_path = "data/raw/sales_data_raw.csv"
         cleaned_path = "data/processed/sales_data_clean.csv"
