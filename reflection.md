@@ -1,6 +1,6 @@
 # What Copilot generated
 Copilot generated the following lines in src/data\_cleaning.py.
-```
+```python
 12. return pd.read_csv(file_path)
 29. df.loc[:, 'qty'] = pd.to_numeric(df['qty'], errors='coerce')
 30. df.loc[:, 'price'] = pd.to_numeric(df['price'], errors='coerce') 
@@ -14,7 +14,7 @@ Copilot generated the following lines in src/data\_cleaning.py.
 ```
 where the numbers at the beginning of each line is the line number in the file.
 
-# Which functions or code blocks came primarily from Copilot’s suggestions? How did you prompt it (comments, partial code, etc.)?
+## Which functions or code blocks came primarily from Copilot’s suggestions? How did you prompt it (comments, partial code, etc.)?
 The two functions that carried a majority was `trim_whitespace(df)` and `load_data(file_path:str)`. I prompted Copilot by simply adding comments above the function declaration telling it what I wanted the function to do, and then it simply filled it out.
 
 # What you modified
